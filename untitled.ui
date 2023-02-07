@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>527</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>20</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关闭</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>80</y>
+      <width>111</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="cameraButton">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>打开摄像头</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="discheckBox">
+       <property name="text">
+        <string>显示</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="facecheckBox">
+       <property name="text">
+        <string>脸部识别</string>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="handscheckBox">
+       <property name="text">
+        <string>手部识别</string>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="posecheckBox">
+       <property name="text">
+        <string>肢体识别</string>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="volumecheckBox">
+       <property name="text">
+        <string>音量控制</string>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="fpscheckBox">
+       <property name="text">
+        <string>显示帧率</string>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="handcontroncheckBox">
+       <property name="text">
+        <string>手势控制鼠标</string>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="imglabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>640</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-radius : 30px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>colseprogram()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>735</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>681</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cameraButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>controlcamera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>707</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>673</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>discheckBox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setdis()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>694</x>
+     <y>160</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>668</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>facecheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>disface()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>740</x>
+     <y>205</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>665</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>handscheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>dishand()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>727</x>
+     <y>249</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>669</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>posecheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>dispose()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>745</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>786</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>volumecheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>controlvalue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>330</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>665</x>
+     <y>339</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fpscheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>disfps()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>720</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>775</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>handcontroncheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>VirtualMouseControl_Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>711</x>
+     <y>410</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>667</x>
+     <y>425</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>colseprogram()</slot>
+  <slot>controlcamera()</slot>
+  <slot>setdis()</slot>
+  <slot>disface()</slot>
+  <slot>dishand()</slot>
+  <slot>controlvalue()</slot>
+  <slot>disfps()</slot>
+  <slot>dispose()</slot>
+  <slot>VirtualMouseControl_Clicked()</slot>
+ </slots>
+</ui>
